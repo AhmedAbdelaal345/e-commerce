@@ -1,8 +1,13 @@
+import 'package:final_projects/core/fixedstrings/end_points.dart';
 import 'package:final_projects/core/utils/app_assets.dart';
 import 'package:final_projects/core/utils/app_color.dart';
 import 'package:final_projects/core/utils/circle_avatar.dart';
 import 'package:final_projects/core/utils/list_tile.dart';
-import 'package:final_projects/features/get_started/login.dart';
+import 'package:final_projects/features/get_started/view/login_view.dart';
+import 'package:final_projects/features/myProfile/my_fav.dart';
+import 'package:final_projects/features/myProfile/my_profile.dart';
+import 'package:final_projects/features/myProfile/settings.dart';
+import 'package:final_projects/features/home/views/my_orders.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -42,7 +47,7 @@ class Profile extends StatelessWidget {
                 padding: EdgeInsets.only(top: 32, bottom: screenheight * 0.066),
                 child: SizedBox(
                   child: Text(
-                    'User full Name',
+                    '${EndPoints.onchange}',
                     style: TextStyle(
                       color: AppColor.red,
                       fontSize: 18,
@@ -54,27 +59,27 @@ class Profile extends StatelessWidget {
               ListTileWidget(
                 imageIcon: AppAssets.profileicon,
                 text: "My profile",
-                screan: Text("lm,fkj"),
+                screan: MyProfile(),
               ),
               SizedBox(height: 0.044 * screenheight),
               ListTileWidget(
                 imageIcon: AppAssets.bag,
                 text: "My Orders",
-                screan: Text("lm,fkj"),
+                screan: MyOrders(),
               ),
               SizedBox(height: 0.044 * screenheight),
 
               ListTileWidget(
                 imageIcon: AppAssets.heart,
                 text: "My Favorites",
-                screan: Text("lm,fkj"),
+                screan: MyFav(),
               ),
               SizedBox(height: 0.044 * screenheight),
 
               ListTileWidget(
                 imageIcon: AppAssets.setting,
                 text: "Settings",
-                screan: Text("lm,fkj"),
+                screan: Settings(),
               ),
               SizedBox(height: 0.0714 * screenheight),
 

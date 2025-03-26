@@ -9,4 +9,6 @@ abstract class AppColor {
   static const Color backgrwhite = Color(0xffFEF7FF);
   static const Color black_move = Color(0xff21003D);
   static const Color black = Color(0xff000000);
+  static const Color blue = Color(0xff4392F9);
+  static const Color pink = Color(0xffFFCCD5);
 }

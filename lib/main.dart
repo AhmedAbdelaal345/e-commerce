@@ -1,13 +1,25 @@
 import 'package:final_projects/core/utils/app_color.dart';
 import 'package:final_projects/features/checkout/placeOrder.dart';
-import 'package:final_projects/features/home/cart.dart';
-import 'package:final_projects/features/home/home.dart';
-import 'package:final_projects/features/home/profile.dart';
+import 'package:final_projects/features/home/views/cart.dart';
+import 'package:final_projects/features/home/views/home.dart';
+import 'package:final_projects/features/home/views/profile.dart';
+import 'package:final_projects/features/myProfile/my_profile.dart';
 import 'package:final_projects/features/onboarding/onboarding.dart';
+import 'package:final_projects/features/product/manager/product_cubit.dart';
+import 'package:final_projects/features/home/views/my_orders.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    BlocProvider(
+      create: (context) => OrderCubit(),
+      child: MaterialApp(
+        home: OnBoardingPage(),
+        // other routes
+      ),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,11 +31,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColor.red),
-        primarySwatch: Colors.blue,
       ),
       initialRoute: '/home',
       routes: {
-        '/home': (context) => PlaceOrder(),
+        '/home': (context) => OnBoardingPage(),
         '/cart': (context) => Cart(),
         '/profile': (context) => Profile(),
       },

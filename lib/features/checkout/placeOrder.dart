@@ -2,7 +2,7 @@ import 'package:final_projects/core/utils/app_assets.dart';
 import 'package:final_projects/core/utils/app_color.dart';
 import 'package:final_projects/core/utils/check_out_container.dart';
 import 'package:final_projects/core/utils/elevated_button.dart';
-import 'package:final_projects/features/home/home.dart';
+import 'package:final_projects/features/home/views/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -64,62 +64,73 @@ class _PlaceOrderState extends State<PlaceOrder> {
                   ),
                 ],
               ),
-            ),//
-            Padding(
-              padding: EdgeInsets.only(left: 0.080 * screenWidth),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  width: 0.64 * screenWidth,
-                  height: 0.097 * screenHeight,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: AppColor.white,
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 14,
-                        spreadRadius: -8,
-                        offset: const Offset(0, 6),
-                        color: Colors.black.withOpacity(0.1),
-                      ),
-                      BoxShadow(
-                        blurRadius: 9,
-                        spreadRadius: -7,
-                        offset: const Offset(0, -4),
-                        color: Colors.black.withOpacity(0.1),
-                      ),
-                    ],
-                  ),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Row(
+            ), //
+            Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 0.080 * screenWidth),
+                  child: Container(
+                    width: 0.64 * screenWidth,
+                    height: 0.097 * screenHeight,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      color: AppColor.white,
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 14,
+                          spreadRadius: -8,
+                          offset: const Offset(0, 6),
+                          color: Colors.black.withOpacity(0.1),
+                        ),
+                        BoxShadow(
+                          blurRadius: 9,
+                          spreadRadius: -7,
+                          offset: const Offset(0, -4),
+                          color: Colors.black.withOpacity(0.1),
+                        ),
+                      ],
+                    ),
+                    child: Column(
                       children: [
-                        
-                        Column(
-                          children: [
-                            Text(
+                        SizedBox(height: 5),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Container(
+                            width: 50,
+                            height: 22,
+                            child: Text(
                               "Address",
                               style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w700,
                               ),
-                              textAlign: TextAlign.left,
                             ),
-                            Text(
-                              '''   Type address here 
-                                           or pick from map''',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                              ),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Type address here or pick from map",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
                             ),
-                          ],
+                          ),
                         ),
                       ],
                     ),
                   ),
                 ),
-              ),
+                Stack(
+                  children: [
+                    SvgPicture.asset(AppAssets.location),
+                    Padding(
+                      padding: EdgeInsets.only(top: 20, left: 25, right: 22),
+                      child: SvgPicture.asset(AppAssets.loc),
+                    ),
+                  ],
+                ),
+              ],
             ),
             ChkContainer(
               text: "Women's Casual Wear",
@@ -148,7 +159,7 @@ class _PlaceOrderState extends State<PlaceOrder> {
                 screan: Text("Thank you For Use Our App"),
                 color: AppColor.red,
                 text: Text(
-                  "Checkout",
+                  "Place Order",
                   style: TextStyle(
                     color: AppColor.white,
                     fontSize: 15,

@@ -136,7 +136,7 @@ class _ChkContainerState extends State<ChkContainer> {
                     ),
                     const SizedBox(height: 8),
                     Padding(
-                      padding: EdgeInsets.only(left: 0.242 * screenWidth),
+                      padding: EdgeInsets.only(left: 0.232 * screenWidth),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -145,8 +145,12 @@ class _ChkContainerState extends State<ChkContainer> {
                             height: 40,
                             child: ElevatedButton(
                               style: ButtonStyle(
-                                padding: MaterialStateProperty.all(EdgeInsets.zero),
-                                backgroundColor: MaterialStateProperty.all(AppColor.red),
+                                padding: MaterialStateProperty.all(
+                                  EdgeInsets.zero,
+                                ),
+                                backgroundColor: MaterialStateProperty.all(
+                                  AppColor.red,
+                                ),
                                 shape: MaterialStateProperty.all(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5),
@@ -184,8 +188,12 @@ class _ChkContainerState extends State<ChkContainer> {
                             height: 40,
                             child: ElevatedButton(
                               style: ButtonStyle(
-                                padding: MaterialStateProperty.all(EdgeInsets.zero),
-                                backgroundColor: MaterialStateProperty.all(AppColor.red),
+                                padding: MaterialStateProperty.all(
+                                  EdgeInsets.zero,
+                                ),
+                                backgroundColor: MaterialStateProperty.all(
+                                  AppColor.red,
+                                ),
                                 shape: MaterialStateProperty.all(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5),

@@ -1,6 +1,6 @@
 import 'package:final_projects/core/utils/app_assets.dart';
 import 'package:final_projects/core/utils/app_color.dart';
-import 'package:final_projects/features/get_started/get_started.dart';
+import 'package:final_projects/features/get_started/view/get_started_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

@@ -4,17 +4,20 @@ import 'package:final_projects/core/utils/check_out_container.dart';
 import 'package:final_projects/core/utils/elevated_button.dart';
 import 'package:final_projects/features/checkout/placeOrder.dart';
 import 'package:final_projects/features/home/views/home.dart';
+import 'package:final_projects/features/product/view/cancelled.dart';
+import 'package:final_projects/features/orders/compelete_order.dart';
+import 'package:final_projects/features/home/views/my_orders.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class Checkout extends StatefulWidget {
-  const Checkout({super.key});
+class OrderDetails extends StatefulWidget {
+  const OrderDetails({super.key});
 
   @override
-  State<Checkout> createState() => _CheckoutState();
+  State<OrderDetails> createState() => _OrderDetailsState();
 }
 
-class _CheckoutState extends State<Checkout> {
+class _OrderDetailsState extends State<OrderDetails> {
   double screenWidth = 0;
   double screenHeight = 0;
   double totalPrice = 0.0;
@@ -30,7 +33,6 @@ class _CheckoutState extends State<Checkout> {
     });
   }
 
-  @override
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
     screenHeight = MediaQuery.of(context).size.height;
@@ -38,7 +40,7 @@ class _CheckoutState extends State<Checkout> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Cart",
+          "Order Details",
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
         ),
         centerTitle: true,
@@ -47,7 +49,7 @@ class _CheckoutState extends State<Checkout> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const Home()),
+              MaterialPageRoute(builder: (context) => const MyOrders()),
             );
           },
         ),
@@ -170,20 +172,44 @@ class _CheckoutState extends State<Checkout> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 55,
-              child: ElevatedButtonn(
-                screan: PlaceOrder(),
-                color: AppColor.red,
-                text: Text(
-                  "Checkout",
-                  style: TextStyle(
-                    color: AppColor.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
+            Row(
+              children: [
+                SizedBox(
+                  height: 26,
+                  width: 110,
+                  child: ElevatedButtonn(
+                    screan: Cancelled(),
+                    color: AppColor.red,
+                    text: Text(
+                      "Cancel",
+                      style: TextStyle(
+                        color: AppColor.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
                 ),
-              ),
+                SizedBox(width: 0.05867 * screenWidth),
+                SizedBox(
+                  height: 26,
+                  width: 110,
+                  child: Expanded(
+                    child: ElevatedButtonn(
+                      screan: CompeleteOrder(),
+                      color: AppColor.red,
+                      text: Text(
+                        "Track Driver",
+                        style: TextStyle(
+                          color: AppColor.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             SizedBox(height: 0.025 * screenHeight),
           ],

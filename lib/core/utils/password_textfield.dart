@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PasswordTextField extends StatefulWidget {
-  const PasswordTextField({required this.label, super.key});
+   PasswordTextField({ this.control,required this.label, super.key});
   final String label;
-
+  TextEditingController? control;
   @override
   State<PasswordTextField> createState() => _PasswordTextFieldState();
 }
@@ -53,6 +53,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
             focusColor: AppColor.red,
             fillColor: Colors.white,
             iconColor: Colors.white,
+        
             isDense: true,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
             suffixIcon: IconButton(
@@ -64,6 +65,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
             enabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,
           ),
+          controller:widget.control,
         ),
       ),
     );

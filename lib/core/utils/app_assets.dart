@@ -4,6 +4,8 @@ abstract class AppAssets {
   static const String basePath = 'assets/utils/';
   static const String onboardingpath1 = '${AppAssets.basePath}shop_1.svg';
   static const String cart = '${AppAssets.basePath}cart.svg';
+  static const String location = '${AppAssets.basePath}location.svg';
+  static const String loc = '${AppAssets.basePath}loc1.svg';
   static const String girle = '${AppAssets.basePath}girle.png';
   static const String man = '${AppAssets.basePath}man.png';
   static const String onboardingpath2 = '${AppAssets.basePath}shop_2.svg';
@@ -35,5 +37,8 @@ abstract class AppAssets {
   static const String bag = '${AppAssets.basePath}Bag.svg';
   static const String bag2 = '${AppAssets.basePath}Bag_2.svg';
   static const String map = '${AppAssets.basePath}map.svg';
+  static const String truee = '${AppAssets.basePath}true.svg';
+  static const String falsee = '${AppAssets.basePath}false.svg';
+  static const String order = '${AppAssets.basePath}no_order.svg';
   static const String getStarted = '${AppAssets.basePath}get_started.png';
 }

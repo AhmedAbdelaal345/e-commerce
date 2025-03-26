@@ -10,6 +10,7 @@ class TextfiledWidget extends StatelessWidget {
     required this.label,
     // required this.controler,
     required this.icon,
+     this.control,
     this.onchange,
     this.ispassword,
     super.key,
@@ -19,6 +20,7 @@ class TextfiledWidget extends StatelessWidget {
   String hint;
   String icon;
   bool? ispassword;
+  TextEditingController? control;
   Function(String)? onchange;
   @override
   Widget build(BuildContext context) {
@@ -62,6 +64,7 @@ class TextfiledWidget extends StatelessWidget {
             enabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,
           ),
+          controller:control ,
           onChanged: onchange,
         ),
       ),

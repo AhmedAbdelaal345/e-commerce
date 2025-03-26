@@ -8,15 +8,17 @@ import 'package:get/get_core/src/get_main.dart';
 
 class ElevatedButtonn extends StatelessWidget {
   ElevatedButtonn({
-    required this.screan,
+     this.screan,
     required this.color,
     required this.text,
     this.borderColor,
+    this.onpressed
   });
-  final Widget screan;
+  final Widget? screan;
   final Color color;
   final Widget text;
   final Color? borderColor;
+  VoidCallback? onpressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,12 +28,12 @@ class ElevatedButtonn extends StatelessWidget {
         height: 25,
         child: ElevatedButton(
           
-          onPressed: () async {
+          onPressed:onpressed ??() async {
             Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return screan;
+                  return screan??Text("");
                 },
               ),
             );

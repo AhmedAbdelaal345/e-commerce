@@ -1,8 +1,8 @@
 import 'package:final_projects/core/utils/app_assets.dart';
 import 'package:final_projects/core/utils/app_color.dart';
 import 'package:final_projects/core/utils/elevated_button.dart';
-import 'package:final_projects/features/get_started/login.dart';
-import 'package:final_projects/features/get_started/register.dart';
+import 'package:final_projects/features/get_started/view/login_view.dart';
+import 'package:final_projects/features/get_started/view/register_view.dart';
 import 'package:flutter/material.dart';
 
 class GetStarted extends StatelessWidget {
