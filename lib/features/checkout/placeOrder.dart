@@ -92,23 +92,28 @@ class _PlaceOrderState extends State<PlaceOrder> {
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Column(
+                    child: Row(
                       children: [
-                        Text(
-                          "Address",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                        Text(
-                          '''   Type address here 
-                   or pick from map''',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                          ),
+                        
+                        Column(
+                          children: [
+                            Text(
+                              "Address",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                            Text(
+                              '''   Type address here 
+                                           or pick from map''',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
