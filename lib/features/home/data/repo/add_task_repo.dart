@@ -5,7 +5,6 @@ import 'package:final_projects/core/fixedstrings/end_points.dart';
 import 'package:final_projects/core/helper/api_helper.dart';
 import 'package:final_projects/core/network/api_response.dart';
 
-
 class AddTaskRepo {
   AddTaskRepo._private();
   static final AddTaskRepo _instance = AddTaskRepo._private();

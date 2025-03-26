@@ -1,4 +1,3 @@
-
 import 'package:final_projects/features/home/data/model/task_model.dart';
 
 abstract class TaskState {}

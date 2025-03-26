@@ -1,7 +1,6 @@
 import 'package:final_projects/core/utils/app_color.dart';
 import 'package:final_projects/features/checkout/placeOrder.dart';
 import 'package:final_projects/features/home/views/cart.dart';
-import 'package:final_projects/features/home/views/home.dart';
 import 'package:final_projects/features/home/views/profile.dart';
 import 'package:final_projects/features/myProfile/my_profile.dart';
 import 'package:final_projects/features/onboarding/onboarding.dart';

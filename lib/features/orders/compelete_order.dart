@@ -3,7 +3,6 @@ import 'package:final_projects/core/utils/app_color.dart';
 import 'package:final_projects/core/utils/check_out_container.dart';
 import 'package:final_projects/core/utils/elevated_button.dart';
 import 'package:final_projects/features/checkout/placeOrder.dart';
-import 'package:final_projects/features/home/views/home.dart';
 import 'package:final_projects/features/product/view/cancelled.dart';
 import 'package:final_projects/features/home/views/my_orders.dart';
 import 'package:flutter/material.dart';
